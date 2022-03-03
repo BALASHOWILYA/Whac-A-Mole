@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#87a96b"
+    tools:context=".EndGameActivity">
+
+
+    <TextView
+        android:id="@+id/txtRecordScore"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="36dp"
+        android:textSize="36dp"
+        android:text="Your record is 0 points" />
+
+    <TextView
+        android:id="@+id/txtScoreRes"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Your score is 0 points"
+        android:textSize="24dp"/>
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <Button
+        android:id="@+id/btnAgain"
+        android:gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_weight="1"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:textSize="24dp"
+        android:text="Play again" />
+
+    <Button
+        android:id="@+id/btnMain"
+        android:gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
+        android:layout_weight="1"
+        android:textSize="24dp"
+        android:text="back to main menu"
+        android:layout_marginBottom="224dp"/>
+
+</LinearLayout>

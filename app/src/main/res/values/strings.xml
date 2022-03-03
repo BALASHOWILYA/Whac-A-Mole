@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Whac-A-Mole</string>
+    <string name="play">Play</string>
+    <string name="message">play</string>
 </resources>
