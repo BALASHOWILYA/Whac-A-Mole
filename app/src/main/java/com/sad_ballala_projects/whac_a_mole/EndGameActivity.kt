@@ -36,7 +36,6 @@ class EndGameActivity : AppCompatActivity() {
         val scoreResult = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
         val editor = scoreResult.edit()
 
-
         if (!scoreResult.contains(APP_PREFERENCES_THE_BEST_SCORE)) return
 
         record = scoreResult.getInt(APP_PREFERENCES_THE_BEST_SCORE, APP_PREFERENCES_SCORE)
@@ -45,32 +44,18 @@ class EndGameActivity : AppCompatActivity() {
 
             if(record == 1) binding.txtRecord.text = "Your record is $record point"
             else binding.txtRecord.text = "Your record is $record points"
+            editor.putInt(APP_PREFERENCES_THE_BEST_SCORE, record)
 
         }
         else{
 
             if(record == 1) binding.txtRecord.text = "Your new record is $currentScore point"
             else binding.txtRecord.text = "Your new record is $currentScore points"
+            editor.putInt(APP_PREFERENCES_THE_BEST_SCORE, currentScore)
 
         }
 
-
-
-
-
-
-
-
-
-        editor.putInt(APP_PREFERENCES_THE_BEST_SCORE, currentScore)
         editor.apply()
-
-
-
-
-
-
-
 
 
     }
