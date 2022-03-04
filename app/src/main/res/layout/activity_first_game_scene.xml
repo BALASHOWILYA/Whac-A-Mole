@@ -8,7 +8,7 @@
     tools:context=".GameSceneActivity">
 
     <TextView
-        android:id="@+id/scoreText"
+        android:id="@+id/txtCurrentScore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -16,11 +16,11 @@
         android:text="Your score is: 0"
         android:textColor="#ffbf00"
         android:textSize="40dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imgCoins"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/timeText"
+        android:id="@+id/txtTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -30,12 +30,12 @@
         android:textSize="25dp"
 
 
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/scoreText" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgTime"
+        app:layout_constraintStart_toEndOf="@+id/imgTime"
+        app:layout_constraintTop_toBottomOf="@+id/txtCurrentScore" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgCoins"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
@@ -45,14 +45,14 @@
         app:srcCompat="@drawable/coins_icon_01" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imgTime"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imgCoins"
         app:srcCompat="@drawable/time_icon_01" />
 
     <GridLayout

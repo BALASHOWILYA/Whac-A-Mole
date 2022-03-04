@@ -13,7 +13,7 @@
 
 
     <TextView
-        android:id="@+id/txtRecordScore"
+        android:id="@+id/txtRecord"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
         android:text="Your record is 0 points" />
 
     <TextView
-        android:id="@+id/txtScoreRes"
+        android:id="@+id/txtCurrentScore"
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

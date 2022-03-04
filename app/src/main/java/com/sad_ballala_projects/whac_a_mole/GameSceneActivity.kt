@@ -38,7 +38,7 @@ class GameSceneActivity : AppCompatActivity() {
             button.setOnClickListener {
                 if (btnImageArray[VisibleMole].isEnabled && btnImageArray[VisibleMole] == it) {
                     scoreText += 1
-                    binding.scoreText.text= "Your score is: ${scoreText}"
+                    binding.txtCurrentScore.text= "Your score is: ${scoreText}"
                     btnImageArray[VisibleMole].isEnabled = false
                     btnImageArray[VisibleMole].setImageResource(R.drawable.mole_part_02)
                 }
@@ -49,7 +49,7 @@ class GameSceneActivity : AppCompatActivity() {
             override fun onTick(millisUntilFinished: Long) {
                 btnImageArray[VisibleMole].isEnabled = false
                 btnImageArray[VisibleMole].setImageResource(R.drawable.mole_part_01)
-                binding.timeText.text = "Time: ${millisUntilFinished / 1000}"
+                binding.txtTime.text = "Time: ${millisUntilFinished / 1000}"
                 var newMole = Random.nextInt(9)
                 while (newMole == VisibleMole) newMole = Random.nextInt(5)
                 VisibleMole = newMole
@@ -59,7 +59,7 @@ class GameSceneActivity : AppCompatActivity() {
 
             override fun onFinish() {
                 val i = Intent(applicationContext, EndGameActivity().javaClass)
-                i.putExtra("Your score is", scoreText.toString())
+                i.putExtra("result", scoreText)
                 startActivity(i)
             }
         }.start()
