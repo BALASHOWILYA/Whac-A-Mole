@@ -29,17 +29,22 @@ class EndGameActivity : AppCompatActivity() {
         val currentScore = i.getIntExtra("result", APP_PREFERENCES_SCORE)
         var record = 0
 
-        if(currentScore == 1) binding.txtCurrentScore.text = "Your current Score is $currentScore point"
-        else binding.txtCurrentScore.text = "Your current Score is $currentScore points"
+        if(currentScore == 1) binding.txtCurrentScore.text = "Your current score is $currentScore point"
+        else binding.txtCurrentScore.text = "Your current score is $currentScore points"
 
 
         val scoreResult = getSharedPreferences(APP_PREFERENCES, Context.MODE_PRIVATE)
         val editor = scoreResult.edit()
 
-        if (!scoreResult.contains(APP_PREFERENCES_THE_BEST_SCORE)) return
+        if (!scoreResult.contains(APP_PREFERENCES_THE_BEST_SCORE)) {
+            if(record == 1) binding.txtRecord.text = "Your new record is $currentScore point"
+            else binding.txtRecord.text = "Your new record is $currentScore points"
+            editor.putInt(APP_PREFERENCES_THE_BEST_SCORE, currentScore)
+            editor.apply()
+            return
+        }
 
         record = scoreResult.getInt(APP_PREFERENCES_THE_BEST_SCORE, APP_PREFERENCES_SCORE)
-
         if(currentScore < record){
 
             if(record == 1) binding.txtRecord.text = "Your record is $record point"
