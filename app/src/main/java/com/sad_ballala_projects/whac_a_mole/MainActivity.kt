@@ -13,13 +13,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val play = findViewById<Button>(R.id.play)
+        val play = findViewById<Button>(R.id.btnPlay)
+        val aboutMe = findViewById<Button>(R.id.btnAboutMe)
 
         play?.setOnClickListener()
         {
             val i = Intent(applicationContext, GameSceneActivity::class.java)
             startActivity(i)
-            Toast.makeText(this@MainActivity, R.string.message, Toast.LENGTH_LONG).show()
+        }
+
+        aboutMe?.setOnClickListener()
+        {
+            val i = Intent(applicationContext, AboutMeActivity::class.java)
+            startActivity(i)
         }
     }
 

@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="play">Play</string>
+
+    <string name="txtTelegram">
+        <a href = "https://t.me/Ilya1Balashov"> Google Link </a>
+    </string>
+
+    <string name="txtVk">
+        <a href = "https://vk.com/id266917672"> Google Link </a>
+    </string>
+
+    <string name="txtEmail">
+        <a href = "ilya.balashow1@gmail.com"> Google Link </a>
+    </string>
+
+    <string name="txtGitHub">
+        <a href = "https://github.com/BALASHOWILYA/Whac-A-Mole"> Google Link </a>
+    </string>
+
 </resources>

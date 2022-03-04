@@ -2,4 +2,21 @@
     <string name="app_name">Whac-A-Mole</string>
     <string name="play">Play</string>
     <string name="message">play</string>
+
+    <string name="txtTelegram">
+        <a href = "https://t.me/Ilya1Balashov">Telegram Link </a>
+    </string>
+
+    <string name="txtVk">
+        <a href = "https://vk.com/id266917672">VK Link </a>
+    </string>
+
+    <string name="txtEmail">
+        <a href = "ilya.balashow1@gmail.com">Email Link </a>
+    </string>
+
+    <string name="txtGitHub">
+        <a href = "https://github.com/BALASHOWILYA/Whac-A-Mole">Github Link </a>
+    </string>
+
 </resources>
